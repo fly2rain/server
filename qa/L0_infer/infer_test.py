@@ -40,6 +40,8 @@ TEST_SYSTEM_SHARED_MEMORY = bool(
 TEST_CUDA_SHARED_MEMORY = bool(int(os.environ.get('TEST_CUDA_SHARED_MEMORY',
                                                   0)))
 CPU_ONLY = (os.environ.get('TRITON_SERVER_CPU_ONLY') is not None)
+USE_GRPC = (os.environ.get('USE_GRPC', 1) != "0")
+USE_HTTP = (os.environ.get('USE_HTTP', 1) != "0")
 BACKENDS = os.environ.get(
     'BACKENDS', "graphdef savedmodel onnx libtorch plan custom python")
 ENSEMBLES = bool(int(os.environ.get('ENSEMBLES', 1)))
@@ -64,8 +66,8 @@ class InferTest(tu.TestResultCollector):
                                 model_version=None,
                                 swap=False,
                                 outputs=("OUTPUT0", "OUTPUT1"),
-                                use_http=True,
-                                use_grpc=True,
+                                use_http=USE_HTTP,
+                                use_grpc=USE_GRPC,
                                 use_http_json_tensors=True,
                                 skip_request_id_check=True,
                                 use_streaming=True,
@@ -86,8 +88,8 @@ class InferTest(tu.TestResultCollector):
                         model_version,
                         swap,
                         outputs,
-                        use_http,
-                        use_grpc,
+                        USE_HTTP,
+                        USE_GRPC,
                         use_http_json_tensors,
                         skip_request_id_check,
                         use_streaming,
@@ -107,8 +109,8 @@ class InferTest(tu.TestResultCollector):
                     model_version,
                     swap,
                     outputs,
-                    use_http,
-                    use_grpc,
+                    USE_HTTP,
+                    USE_GRPC,
                     use_http_json_tensors,
                     skip_request_id_check,
                     use_streaming,
