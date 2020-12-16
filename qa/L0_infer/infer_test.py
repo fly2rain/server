@@ -510,6 +510,8 @@ class InferTest(tu.TestResultCollector):
                     np.int8,
                     model_version=1,
                     swap=False,
+                    use_http=USE_HTTP,
+                    use_grpc=USE_GRPC,
                     use_system_shared_memory=TEST_SYSTEM_SHARED_MEMORY,
                     use_cuda_shared_memory=TEST_CUDA_SHARED_MEMORY)
             except InferenceServerException as ex:
@@ -527,6 +529,8 @@ class InferTest(tu.TestResultCollector):
                     np.int8,
                     model_version=2,
                     swap=True,
+                    use_http=USE_HTTP,
+                    use_grpc=USE_GRPC,
                     use_system_shared_memory=TEST_SYSTEM_SHARED_MEMORY,
                     use_cuda_shared_memory=TEST_CUDA_SHARED_MEMORY)
             except InferenceServerException as ex:
@@ -542,6 +546,8 @@ class InferTest(tu.TestResultCollector):
                            np.int8,
                            model_version=3,
                            swap=True,
+                           use_http=USE_HTTP,
+                           use_grpc=USE_GRPC,
                            use_system_shared_memory=TEST_SYSTEM_SHARED_MEMORY,
                            use_cuda_shared_memory=TEST_CUDA_SHARED_MEMORY)
 
@@ -565,6 +571,8 @@ class InferTest(tu.TestResultCollector):
                     np.int16,
                     model_version=1,
                     swap=False,
+                    use_http=USE_HTTP,
+                    use_grpc=USE_GRPC,
                     use_system_shared_memory=TEST_SYSTEM_SHARED_MEMORY,
                     use_cuda_shared_memory=TEST_CUDA_SHARED_MEMORY)
             except InferenceServerException as ex:
@@ -580,6 +588,8 @@ class InferTest(tu.TestResultCollector):
                            np.int16,
                            model_version=2,
                            swap=True,
+                           use_http=USE_HTTP,
+                           use_grpc=USE_GRPC,
                            use_system_shared_memory=TEST_SYSTEM_SHARED_MEMORY,
                            use_cuda_shared_memory=TEST_CUDA_SHARED_MEMORY)
             iu.infer_exact(self,
@@ -591,6 +601,8 @@ class InferTest(tu.TestResultCollector):
                            np.int16,
                            model_version=3,
                            swap=True,
+                           use_http=USE_HTTP,
+                           use_grpc=USE_GRPC,
                            use_system_shared_memory=TEST_SYSTEM_SHARED_MEMORY,
                            use_cuda_shared_memory=TEST_CUDA_SHARED_MEMORY)
 
@@ -612,6 +624,8 @@ class InferTest(tu.TestResultCollector):
                            np.int32,
                            model_version=1,
                            swap=False,
+                           use_http=USE_HTTP,
+                           use_grpc=USE_GRPC,
                            use_system_shared_memory=TEST_SYSTEM_SHARED_MEMORY,
                            use_cuda_shared_memory=TEST_CUDA_SHARED_MEMORY)
             iu.infer_exact(self,
@@ -623,6 +637,8 @@ class InferTest(tu.TestResultCollector):
                            np.int32,
                            model_version=2,
                            swap=True,
+                           use_http=USE_HTTP,
+                           use_grpc=USE_GRPC,
                            use_system_shared_memory=TEST_SYSTEM_SHARED_MEMORY,
                            use_cuda_shared_memory=TEST_CUDA_SHARED_MEMORY)
             iu.infer_exact(self,
@@ -634,6 +650,8 @@ class InferTest(tu.TestResultCollector):
                            np.int32,
                            model_version=3,
                            swap=True,
+                           use_http=USE_HTTP,
+                           use_grpc=USE_GRPC,
                            use_system_shared_memory=TEST_SYSTEM_SHARED_MEMORY,
                            use_cuda_shared_memory=TEST_CUDA_SHARED_MEMORY)
 
@@ -655,6 +673,8 @@ class InferTest(tu.TestResultCollector):
                            np.float16,
                            model_version=1,
                            swap=False,
+                           use_http=USE_HTTP,
+                           use_grpc=USE_GRPC,
                            use_system_shared_memory=TEST_SYSTEM_SHARED_MEMORY,
                            use_cuda_shared_memory=TEST_CUDA_SHARED_MEMORY)
 
@@ -669,6 +689,8 @@ class InferTest(tu.TestResultCollector):
                     np.float16,
                     model_version=2,
                     swap=True,
+                    use_http=USE_HTTP,
+                    use_grpc=USE_GRPC,
                     use_system_shared_memory=TEST_SYSTEM_SHARED_MEMORY,
                     use_cuda_shared_memory=TEST_CUDA_SHARED_MEMORY)
             except InferenceServerException as ex:
@@ -686,6 +708,8 @@ class InferTest(tu.TestResultCollector):
                     np.float16,
                     model_version=3,
                     swap=True,
+                    use_http=USE_HTTP,
+                    use_grpc=USE_GRPC,
                     use_system_shared_memory=TEST_SYSTEM_SHARED_MEMORY,
                     use_cuda_shared_memory=TEST_CUDA_SHARED_MEMORY)
             except InferenceServerException as ex:
@@ -712,6 +736,8 @@ class InferTest(tu.TestResultCollector):
                            np.float32,
                            model_version=1,
                            swap=False,
+                           use_http=USE_HTTP,
+                           use_grpc=USE_GRPC,
                            use_system_shared_memory=TEST_SYSTEM_SHARED_MEMORY,
                            use_cuda_shared_memory=TEST_CUDA_SHARED_MEMORY)
 
@@ -726,6 +752,8 @@ class InferTest(tu.TestResultCollector):
                     np.float32,
                     model_version=2,
                     swap=True,
+                    use_http=USE_HTTP,
+                    use_grpc=USE_GRPC,
                     use_system_shared_memory=TEST_SYSTEM_SHARED_MEMORY,
                     use_cuda_shared_memory=TEST_CUDA_SHARED_MEMORY)
             except InferenceServerException as ex:
@@ -741,6 +769,8 @@ class InferTest(tu.TestResultCollector):
                            np.float32,
                            model_version=3,
                            swap=True,
+                           use_http=USE_HTTP,
+                           use_grpc=USE_GRPC,
                            use_system_shared_memory=TEST_SYSTEM_SHARED_MEMORY,
                            use_cuda_shared_memory=TEST_CUDA_SHARED_MEMORY)
 
@@ -759,6 +789,8 @@ class InferTest(tu.TestResultCollector):
                         np.float32,
                         np.float32,
                         np.float32,
+                        use_http=USE_HTTP,
+                        use_grpc=USE_GRPC,
                         use_system_shared_memory=TEST_SYSTEM_SHARED_MEMORY,
                         use_cuda_shared_memory=TEST_CUDA_SHARED_MEMORY)
 
@@ -773,6 +805,8 @@ class InferTest(tu.TestResultCollector):
                         np.int32,
                         np.float32,
                         np.float32,
+                        use_http=USE_HTTP,
+                        use_grpc=USE_GRPC,
                         use_system_shared_memory=TEST_SYSTEM_SHARED_MEMORY,
                         use_cuda_shared_memory=TEST_CUDA_SHARED_MEMORY)
 
@@ -787,6 +821,8 @@ class InferTest(tu.TestResultCollector):
                         np.int32,
                         np.float32,
                         np.float32,
+                        use_http=USE_HTTP,
+                        use_grpc=USE_GRPC,
                         use_system_shared_memory=TEST_SYSTEM_SHARED_MEMORY,
                         use_cuda_shared_memory=TEST_CUDA_SHARED_MEMORY)
 
@@ -803,6 +839,8 @@ class InferTest(tu.TestResultCollector):
                             np.float32,
                             np.float32,
                             np.float32,
+                            use_http=USE_HTTP,
+                            use_grpc=USE_GRPC,
                             use_system_shared_memory=TEST_SYSTEM_SHARED_MEMORY,
                             use_cuda_shared_memory=TEST_CUDA_SHARED_MEMORY)
                     iu.infer_exact(
@@ -812,6 +850,8 @@ class InferTest(tu.TestResultCollector):
                         np.float32,
                         np.float32,
                         np.float32,
+                        use_http=USE_HTTP,
+                        use_grpc=USE_GRPC,
                         use_system_shared_memory=TEST_SYSTEM_SHARED_MEMORY,
                         use_cuda_shared_memory=TEST_CUDA_SHARED_MEMORY)
 
@@ -824,6 +864,8 @@ class InferTest(tu.TestResultCollector):
                         np.float32,
                         np.float32,
                         np.float32,
+                        use_http=USE_HTTP,
+                        use_grpc=USE_GRPC,
                         use_system_shared_memory=TEST_SYSTEM_SHARED_MEMORY,
                         use_cuda_shared_memory=TEST_CUDA_SHARED_MEMORY)
 
@@ -842,6 +884,8 @@ class InferTest(tu.TestResultCollector):
                             np.float32,
                             output0_raw=False,
                             output1_raw=False,
+                            use_http=USE_HTTP,
+                            use_grpc=USE_GRPC,
                             use_system_shared_memory=TEST_SYSTEM_SHARED_MEMORY,
                             use_cuda_shared_memory=TEST_CUDA_SHARED_MEMORY)
 
@@ -857,6 +901,8 @@ class InferTest(tu.TestResultCollector):
                             np.float32,
                             output0_raw=False,
                             output1_raw=False,
+                            use_http=USE_HTTP,
+                            use_grpc=USE_GRPC,
                             use_system_shared_memory=TEST_SYSTEM_SHARED_MEMORY,
                             use_cuda_shared_memory=TEST_CUDA_SHARED_MEMORY)
 
@@ -872,6 +918,8 @@ class InferTest(tu.TestResultCollector):
                             np.float32,
                             output0_raw=False,
                             output1_raw=False,
+                            use_http=USE_HTTP,
+                            use_grpc=USE_GRPC,
                             use_system_shared_memory=TEST_SYSTEM_SHARED_MEMORY,
                             use_cuda_shared_memory=TEST_CUDA_SHARED_MEMORY)
                     except AssertionError:
@@ -890,6 +938,8 @@ class InferTest(tu.TestResultCollector):
                             np.float32,
                             output0_raw=False,
                             output1_raw=False,
+                            use_http=USE_HTTP,
+                            use_grpc=USE_GRPC,
                             use_system_shared_memory=TEST_SYSTEM_SHARED_MEMORY,
                             use_cuda_shared_memory=TEST_CUDA_SHARED_MEMORY)
 
